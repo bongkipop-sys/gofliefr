@@ -1,0 +1,177 @@
+{
+  "expo": {
+    "name": "Vega-Next",
+    "displayName": "Vega-Next",
+    "slug": "vega-next",
+    "version": "3.6.1",
+    "sdkVersion": "54.0.0",
+    "newArchEnabled": true,
+    "jsEngine": "hermes",
+    "userInterfaceStyle": "dark",
+    "autolinking": {
+      "exclude": [
+        "expo-splash-screen"
+      ]
+    },
+    "plugins": [
+      [
+        "react-native-edge-to-edge",
+        {
+          "android": {
+            "parentTheme": "Default",
+            "enforceNavigationBarContrast": false
+          }
+        }
+      ],
+      [
+        "react-native-bootsplash",
+        {
+          "assetsDir": "assets/bootsplash",
+          "android": {
+            "parentTheme": "EdgeToEdge"
+          }
+        }
+      ],
+      [
+        "react-native-video",
+        {
+          "enableNotificationControls": true,
+          "enableAndroidPictureInPicture": true,
+          "androidExtensions": {
+            "useExoplayerRtsp": false,
+            "useExoplayerSmoothStreaming": true,
+            "useExoplayerHls": true,
+            "useExoplayerDash": true
+          }
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "extraMavenRepos": [
+              "../../node_modules/@notifee/react-native/android/libs",
+              "https://jitpack.io"
+            ],
+            "enableProguardInReleaseBuilds": true,
+            "splits": {
+              "abi": {
+                "enable": true,
+                "universalApk": true
+              }
+            },
+            "buildVariants": {
+              "release": {
+                "minifyEnabled": true,
+                "shrinkResources": true,
+                "splits": {
+                  "abi": {
+                    "enable": true,
+                    "reset": false,
+                    "include": [
+                      "armeabi-v7a",
+                      "arm64-v8a"
+                    ]
+                  }
+                }
+              },
+              "debug": {
+                "minifyEnabled": false,
+                "debuggable": true
+              }
+            }
+          },
+          "ios": {}
+        }
+      ]
+    ],
+    "updates": {
+      "enabled": true,
+      "checkAutomatically": "ON_LOAD",
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/671c42c5-ed3c-4e8a-adca-94c20c08055f"
+    },
+    "android": {
+      "minSdkVersion": 24,
+      "edgeToEdgeEnabled": true,
+      "package": "com.vega.next",
+      "versionCode": 145,
+      "permissions": [
+        "FOREGROUND_SERVICE",
+        "FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+        "INTERNET",
+        "MANAGE_EXTERNAL_STORAGE",
+        "READ_EXTERNAL_STORAGE",
+        "READ_MEDIA_VIDEO",
+        "WRITE_EXTERNAL_STORAGE",
+        "WRITE_SETTINGS"
+      ],
+      "manifestPermissions": [
+        {
+          "name": "READ_EXTERNAL_STORAGE",
+          "maxSdkVersion": 32
+        },
+        {
+          "name": "WRITE_EXTERNAL_STORAGE",
+          "maxSdkVersion": 32
+        }
+      ],
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "category": "BROWSABLE",
+          "data": {
+            "scheme": "com.vega.next"
+          }
+        }
+      ],
+      "queries": [
+        {
+          "action": "VIEW",
+          "data": {
+            "scheme": "http"
+          }
+        },
+        {
+          "action": "VIEW",
+          "data": {
+            "scheme": "https"
+          }
+        },
+        {
+          "action": "VIEW",
+          "data": {
+            "scheme": "vlc"
+          }
+        }
+      ],
+      "config": {
+        "requestLegacyExternalStorage": true
+      },
+      "allowBackup": true,
+      "icon": "./assets/icon.png",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive_icon.png",
+        "backgroundColor": "#000000"
+      },
+      "launchMode": "singleTask",
+      "supportsPictureInPicture": true
+    },
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "671c42c5-ed3c-4e8a-adca-94c20c08055f"
+      }
+    },
+    "owner": "kalipusur",
+    "runtimeVersion": "1.0.0",
+    "ios": {
+      "infoPlist": {
+        "CADisableMinimumFrameDurationOnPhone": true
+      }
+    }
+  }
+}
